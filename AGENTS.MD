@@ -51,3 +51,19 @@ This file defines the universal skills, behaviours, and guidelines that all AI c
 
 - If a requirement is ambiguous, state your interpretation clearly before proceeding.
 - If a task cannot be completed safely or correctly, stop and explain why rather than producing a broken or insecure result.
+
+---
+
+## Personas
+
+The skills above are universal. For domain-specific guidance, load the relevant persona file from the [`personas/`](./personas/) directory alongside this file:
+
+| Persona | File | Use when… |
+|---------|------|-----------|
+| Technical | [`personas/technical.md`](./personas/technical.md) | Writing, reviewing, or debugging code |
+| Legal | [`personas/legal.md`](./personas/legal.md) | Researching law, drafting contracts, or assessing compliance |
+| Ethics | [`personas/ethics.md`](./personas/ethics.md) | Reviewing decisions, policies, or AI systems for ethical risks |
+| Interviews | [`personas/interviews.md`](./personas/interviews.md) | Preparing candidates or designing interview questions |
+| General | [`personas/general.md`](./personas/general.md) | Everyday tasks that don't fit a more specialised persona |
+
+To add a new persona, create a file in `personas/` that references this file as its baseline and describes the scope, behaviour, and communication style relevant to that domain.
