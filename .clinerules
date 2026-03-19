@@ -1,0 +1,22 @@
+# Cline Rules
+
+The universal skills and principles for this repository are defined in [`AGENTS.MD`](./AGENTS.MD). The rules below are Cline-specific extensions.
+
+---
+
+## Behaviour
+
+- Always read `AGENTS.MD` at the start of a task for the shared baseline.
+- Prefer Cline's built-in file-read/write actions over shell commands when editing source files.
+- Keep auto-approve scope minimal — require explicit approval for destructive operations (deletes, force-pushes, deployments).
+- When a task involves multiple files, complete and verify each file before moving to the next.
+
+## Tool Use
+
+- Use the terminal tool only when a built-in action (read, write, search) cannot achieve the goal.
+- Stream large command output rather than capturing it all at once to avoid context overflow.
+
+## Communication
+
+- Summarise what you are about to do before executing multi-step tasks.
+- If a step fails, report the error and your proposed fix before retrying.

@@ -1,21 +1,18 @@
 # agent-skills
 
-A curated collection of reusable prompts for AI agents, organised by the type of work the agent performs.
+A collection of reusable AI agent skills and instructions for various coding-assistant tools.
 
-## Categories
+## Structure
 
-### 🔍 [Advice & Guidance](skills/advice-guidance/)
+| File | Purpose |
+|------|---------|
+| [`AGENTS.MD`](./AGENTS.MD) | Universal skills and principles shared by all agents |
+| [`CLAUDE.md`](./CLAUDE.md) | Claude Code-specific extensions |
+| [`.clinerules`](./.clinerules) | Cline-specific extensions |
+| [`.roorules`](./.roorules) | Roo-specific extensions |
 
-Skills for agents that **review, evaluate, and recommend** — without making direct changes. Use these when you want an agent to think critically and give you structured feedback.
+## How it works
 
-Examples: code review, architecture evaluation, security audit.
+`AGENTS.MD` is the single source of truth for general coding behaviour (minimal changes, testing, git hygiene, security, etc.). Each tool-specific file references `AGENTS.MD` as the baseline and adds only the configuration or behaviour that is unique to that tool.
 
-### ⚙️ [Execution](skills/execution/)
-
-Skills for agents that **actively perform tasks** and produce concrete outputs. Use these when you want an agent to build, fix, or write something.
-
-Examples: feature implementation, test writing, refactoring.
-
-## Contributing
-
-Want to add a skill? See [CONTRIBUTING.md](CONTRIBUTING.md) for a step-by-step guide and a ready-to-use template.
+To add support for a new tool, create a new file following the same pattern and reference `AGENTS.MD` at the top.
