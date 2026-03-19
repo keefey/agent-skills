@@ -1,0 +1,23 @@
+# Roo Rules
+
+The universal skills and principles for this repository are defined in [`AGENTS.MD`](./AGENTS.MD). The rules below are Roo-specific extensions.
+
+---
+
+## Behaviour
+
+- Always read `AGENTS.MD` at the start of a task for the shared baseline.
+- Use Roo's mode system appropriately: switch to *Architect* mode for planning, *Code* mode for implementation, and *Debug* mode for troubleshooting.
+- Only request the permissions (file access, shell, browser) that the current task genuinely requires.
+- Confirm destructive actions (file deletion, database migrations, deployments) with the user before proceeding.
+
+## Tool Use
+
+- Prefer Roo's built-in search and file tools over running shell commands.
+- When shell commands are necessary, prefer short-lived, non-interactive commands and capture their output.
+
+## Communication
+
+- Provide a brief plan before starting multi-step tasks.
+- After completing a task, summarise what was changed and why.
+- If the task is blocked or ambiguous, ask a focused clarifying question rather than making assumptions.
